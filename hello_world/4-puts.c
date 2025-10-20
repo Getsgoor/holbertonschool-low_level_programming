@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - description pour main
+ * main - Prints a string
  * Return: Always 0 (Success)
  */
 int main(void)
