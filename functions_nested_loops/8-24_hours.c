@@ -9,10 +9,10 @@
 
 void jack_bauer(void)
 {
-	int min1;
-	int min2;
-	int hour1;
-	int hour2;
+	char min1;
+	char min2;
+	char hour1;
+	char hour2;
 
 	for (hour2 = '0'; hour2 <= '2'; hour2++)
 	{
