@@ -11,8 +11,8 @@ void jack_bauer(void)
 {
 	char min1;
 	char min2;
-	char hour1;
-	char hour2;
+	char hour1 = 0;
+	char hour2 = 0;
 
 	for (hour2 = '0'; hour2 <= '2'; hour2++)
 	{
@@ -22,17 +22,18 @@ void jack_bauer(void)
 			{
 				for (min1 = '0'; min1 <= '9'; min1++)
 				{
-					while (hour2 <= 2 && hour1 <= 3)
+					if (hour2 <= '2' && hour1 <= '3' && min2 <= '5')
 					{
 						_putchar(hour2);
 						_putchar(hour1);
 						_putchar(':');
 						_putchar(min2);
 						_putchar(min1);
+						_putchar('\n');
 					}
-					_putchar('\n');
 				}
 			}
 		}
 	}
+
 }
