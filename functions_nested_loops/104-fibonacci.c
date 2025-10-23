@@ -12,12 +12,12 @@
 
 void fibonacci(void)
 {
-	long int a1 = 0;
-	long int a2 = 1;
-	long int b1 = 0;
-	long int b2 = 2;
-	long int c1 = a1 + b1;
-	long int c2 = a2 + b2;
+	unsigned long int a1 = 0;
+	unsigned long int a2 = 1;
+	unsigned long int b1 = 0;
+	unsigned long int b2 = 2;
+	unsigned long int c1 = a1 + b1;
+	unsigned long int c2 = a2 + b2;
 
 	int i;
 
@@ -33,8 +33,8 @@ void fibonacci(void)
 		a2 = b2;
 		b1 = c1;
 		b2 = c2;
-		c2 = ((a2 + b2) % 10000000000000);
-		c1 = ((a1 + b1) % 10000000000000) + ((a2 + b2) / 10000000000000);
+		c2 = ((a2 + b2) % 1000000000000000000);
+		c1 = ((a1 + b1) % 1000000000000000000) + ((a2 + b2) / 1000000000000000000);
 	}
 	printf("\n");
 }
