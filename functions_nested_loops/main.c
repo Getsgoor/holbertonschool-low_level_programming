@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    natural();
+    fibonacci();
 
     return (0);
 }
