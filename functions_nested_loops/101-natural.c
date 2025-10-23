@@ -1,4 +1,5 @@
 #include "main.h"
+#include "main.c"
 #include <stdio.h>
 /**
  * natural- writes the character c to stdout
