@@ -9,8 +9,8 @@
  * Return: Always 0.
  */
 
- void natural(void)
- {
+void natural(void)
+{
 	int n = 0, somme = 0;
 
 	for (n = 0; n < 1024; n++)
@@ -19,4 +19,4 @@
 			somme += n;
 	}
 	printf("%d\n", somme);
- }
+}
