@@ -24,7 +24,8 @@ void print_times_table(int n)
 		_putchar(' ');
 		_putchar('0');
 	}
-	_putchar('\n');
+	if (n > 0)
+		_putchar('\n');
 	for (a = 1; a <= n; a++)
 	{
 
