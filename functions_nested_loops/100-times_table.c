@@ -7,7 +7,6 @@
  *
  * Return: Always 0.
  */
-
 void print_times_table(int n)
 {
 	int a = 0;
@@ -25,8 +24,6 @@ void print_times_table(int n)
 		_putchar('0');
 	}
 	_putchar('\n');
-
-
 	for (a = 1; a <= n; a++)
 	{
 		_putchar('0');
@@ -53,7 +50,6 @@ void print_times_table(int n)
 				_putchar((miroir % 10) + '0');
 				miroir /= 10;
 			}
-			
 		}
 		_putchar('\n');
 	}
