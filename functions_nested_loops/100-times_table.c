@@ -14,7 +14,7 @@ void print_times_table(int n)
 	int somme = 0;
 	int miroir = 0;
 
-	if (n > 0)
+	if (n >= 0)
 		_putchar('0');
 	for (a = 1; a <= n; a++)
 	{
@@ -24,7 +24,7 @@ void print_times_table(int n)
 		_putchar(' ');
 		_putchar('0');
 	}
-	if (n > 0)
+	if (n >= 0)
 		_putchar('\n');
 	for (a = 1; a <= n; a++)
 	{
