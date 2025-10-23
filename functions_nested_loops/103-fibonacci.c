@@ -16,7 +16,7 @@ void fibonacci(void)
 	long int a = 1;
 	long int b = 2;
 	long int c = a + b;
-	long int somme = 0;
+	long int somme = 2;
 
 	while (c < 4000000)
 	{
