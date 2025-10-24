@@ -1,58 +1,50 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdbool.h>
+
 /**
- * print_times_table- writes the character c to stdout
+ * print_times_table- prints the n times table
  * @n: The character to print
  *
- *
- * Return: Always 0.
+ * Return: void
  */
+
+
 void print_times_table(int n)
 {
-	int a = 0;
-	int b = 0;
-	int somme = 0;
-	int miroir = 0;
+	int i, j, taille, produit;
+	bool bonnetaille;
 
-	if (n >= 0)
-		_putchar('0');
-	for (a = 1; a <= n; a++)
+	for (i = 0; i <= n; i++)
 	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(' ');
 		_putchar('0');
-	}
-	if (n >= 0)
-		_putchar('\n');
-	for (a = 1; a <= n; a++)
-	{
-
-		_putchar('0');
-		for (b = 1; b <= n; b++)
+		for (j = 1; j <= n; j++)
 		{
-			somme = a * b;
-			miroir = 1;
+			taille = 1000;
+			produit = i * j;
 
 			_putchar(',');
-			if (somme / 1000 == 0)
-				_putchar(' ');
-			if (somme / 100 == 0)
-				_putchar(' ');
-			if (somme / 10 == 0)
-				_putchar(' ');
+			while (produit < taille)
+			{
+				if (taille != 1)
+					_putchar(' ');
+				taille /= 10;
+			}
+			taille = 100000;
+			bonnetaille = false;
 
-			while (somme > 0)
+			while (taille > 1)
 			{
-				miroir = miroir * 10 + somme % 10;
-				somme /= 10;
+				if (taille <= produit)
+					bonnetaille = true;
+				if (bonnetaille)
+				{
+					_putchar((produit / taille) + '0');
+					produit %= taille;
+				}
+				taille /= 10;
 			}
-			while (miroir / 10 != 0)
-			{
-				_putchar((miroir % 10) + '0');
-				miroir /= 10;
-			}
+			_putchar(produit % 10 + '0');
 		}
 		_putchar('\n');
 	}
