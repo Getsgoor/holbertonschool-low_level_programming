@@ -9,43 +9,45 @@
  * Return: void
  */
 
-
 void print_times_table(int n)
 {
 	int i, j, taille, produit;
 	bool bonnetaille;
 
-	for (i = 0; i <= n; i++)
+	if (n >= 0 && n <= 15)
 	{
-		_putchar('0');
-		for (j = 1; j <= n; j++)
+		for (i = 0; i <= n; i++)
 		{
-			taille = 1000;
-			produit = i * j;
-
-			_putchar(',');
-			while (produit < taille)
+			_putchar('0');
+			for (j = 1; j <= n; j++)
 			{
-				if (taille != 1)
-					_putchar(' ');
-				taille /= 10;
-			}
-			taille = 100000;
-			bonnetaille = false;
+				taille = 1000;
+				produit = i * j;
 
-			while (taille > 1)
-			{
-				if (taille <= produit)
-					bonnetaille = true;
-				if (bonnetaille)
+				_putchar(',');
+				while (produit < taille)
 				{
-					_putchar((produit / taille) + '0');
-					produit %= taille;
+					if (taille != 1)
+						_putchar(' ');
+					taille /= 10;
 				}
-				taille /= 10;
+				taille = 100000;
+				bonnetaille = false;
+
+				while (taille > 1)
+				{
+					if (taille <= produit)
+						bonnetaille = true;
+					if (bonnetaille)
+					{
+						_putchar((produit / taille) + '0');
+						produit %= taille;
+					}
+					taille /= 10;
+				}
+				_putchar(produit % 10 + '0');
 			}
-			_putchar(produit % 10 + '0');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
