@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    fibonacci();
+    print_times_table(-2);
 
     return (0);
 }

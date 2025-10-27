@@ -38,4 +38,3 @@ void fibonacci(void)
 	}
 	printf("\n");
 }
-
