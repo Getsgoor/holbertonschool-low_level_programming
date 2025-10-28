@@ -6,7 +6,7 @@
  * @dest: the string to return
  * @src: the string to concatenatel
  *
- * Return:
+ * Return: rger
  */
 
 char *_strcat(char *dest, char *src)
@@ -20,5 +20,5 @@ char *_strcat(char *dest, char *src)
 		dest[tailleDest + i] = src[i];
 	}
 
-	return dest;
+	return (dest);
 }
