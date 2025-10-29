@@ -30,15 +30,17 @@ int _atoi(char *s)
 		{
 			retour *= 10;
 		}
-		else if (!positif)
-		{
-			printf("%d\n",12);
-			return (INT_MIN);
-		}
-			
 		else
 		{
-			return (INT_MAX);
+			if (!positif)
+			{
+				printf("%d\n", 12);
+				return (INT_MIN);
+			}
+			else
+			{
+				return (INT_MAX);
+			}
 		}
 
 		i++;
