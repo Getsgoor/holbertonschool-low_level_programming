@@ -38,18 +38,12 @@ int _atoi(char *s)
 			
 		else
 		{
-			printf("%d\n",12);
 			return (INT_MAX);
 		}
 
 		i++;
 	}
-	if (retour < 0)
-	{
-		if (!positif)
-			return (INT_MIN);
-		return (INT_MAX);
-	}
+
 	if (!positif)
 		retour *= (-1);
 	return (retour /= 10);
