@@ -22,28 +22,11 @@ int _atoi(char *s)
 			positif = !positif;
 		i++;
 	}
-	while (s[i] >= '0' && s[i] <= '9')
+	for (; i>= '0'  &&  i<= '9'; i++)
 	{
 
+		retour *= 10;
 		retour += s[i] - '0';
-		if (retour < max)
-		{
-			retour *= 10;
-		}
-		else
-		{
-			if (!positif)
-			{
-				printf("%d\n", 12);
-				return (INT_MIN);
-			}
-			else
-			{
-				return (INT_MAX);
-			}
-		}
-
-		i++;
 	}
 
 	if (!positif)
