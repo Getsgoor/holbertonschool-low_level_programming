@@ -14,7 +14,7 @@ int _atoi(char *s)
 	int i = 0;
 	bool positif = true;
 	int retour = 0;
-	
+
 	while (!(s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
 	{
 		if (s[i] == '-')
@@ -23,16 +23,18 @@ int _atoi(char *s)
 	}
 	while (s[i] >= '0' && s[i] <= '9')
 	{
-		retour += s[i] - '0';
-		retour *= 10;
+		if (retour < INT_MAX)
+		{
+			retour += s[i] - '0';
+			retour *= 10;
+		}
 		i++;
-
 	}
 	if (retour < 0)
 	{
 		if (!positif)
-			return INT_MIN;
-		return INT_MAX;
+			return (INT_MIN);
+		return (INT_MAX);
 	}
 	if (!positif)
 		retour *= (-1);
