@@ -32,12 +32,13 @@ int _atoi(char *s)
 		}
 		else if (!positif)
 		{
-			printf("%d\n",retour);
+			printf("%d\n",12);
 			return (INT_MIN);
 		}
 			
 		else
 		{
+			printf("%d\n",12);
 			return (INT_MAX);
 		}
 
