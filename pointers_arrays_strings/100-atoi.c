@@ -30,3 +30,20 @@ int _atoi(char *s)
 		retour *= (-1);
 	return (retour /= 10);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
