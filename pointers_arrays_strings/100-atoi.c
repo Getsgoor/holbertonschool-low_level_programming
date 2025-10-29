@@ -24,11 +24,8 @@ int _atoi(char *s)
 	}
 	for(;s[i] >= '0'  &&  s[i] <= '9'; i++)
 	{
-
 		retour *= 10;
 		retour += s[i] - '0';
-		
-
 	}
 
 	if (!positif)
