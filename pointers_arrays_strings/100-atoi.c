@@ -15,17 +15,19 @@ int _atoi(char *s)
 	bool positif = true;
 	int retour = 0;
 
-
 	while (!(s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
 	{
 		if (s[i] == '-')
 			positif = !positif;
 		i++;
 	}
-	for(;s[i] >= '0'  &&  s[i] <= '9'; i++)
+	for (; s[i] >= '0' && s[i] <= '9'; i++)
 	{
 		retour *= 10;
-		retour += s[i] - '0';
+		if (retour == 2147483640  &&  (s[i] - '0' > 7))
+			return INT_MIN;
+		else
+			retour += s[i] - '0';
 	}
 
 	if (!positif)
