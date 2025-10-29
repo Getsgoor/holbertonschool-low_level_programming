@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdbool.h>
 #include <limits.h>
-
+#include <stdio.h>
 /**
  * _atoi- convert a string to int
  * @s: the string to convert
@@ -31,7 +31,11 @@ int _atoi(char *s)
 			retour *= 10;
 		}
 		else if (!positif)
+		{
+			printf("%d\n",INT_MIN);
 			return (INT_MIN);
+		}
+			
 		else
 			return (INT_MAX);
 
