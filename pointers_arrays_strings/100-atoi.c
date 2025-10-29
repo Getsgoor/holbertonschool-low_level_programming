@@ -31,7 +31,7 @@ int _atoi(char *s)
 			retour *= 10;
 		}
 		else if (!positif)
-			return (INT_MIN);
+			return (12);
 		else
 			return (INT_MAX);
 
