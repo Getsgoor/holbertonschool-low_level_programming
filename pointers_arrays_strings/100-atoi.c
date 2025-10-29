@@ -31,9 +31,9 @@ int _atoi(char *s)
 			retour *= 10;
 		}
 		else if (!positif)
-			return INT_MIN;
+			return (INT_MIN);
 		else
-			return INT_MAX;
+			return (INT_MAX);
 
 		i++;
 	}
