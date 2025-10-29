@@ -29,25 +29,12 @@ int _atoi(char *s)
 
 	}
 	if (retour < 0)
-		retour = INT_MAX;
+	{
+		if (!positif)
+			return INT_MIN;
+		return INT_MAX;
+	}
 	if (!positif)
 		retour *= (-1);
 	return (retour /= 10);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
