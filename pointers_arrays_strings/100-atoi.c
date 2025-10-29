@@ -23,7 +23,7 @@ int _atoi(char *s)
 	}
 	while (s[i] >= '0' && s[i] <= '9')
 	{
-		if (retour * 10 < INT_MAX)
+		if (retour < INT_MAX / 10)
 		{
 			retour += s[i] - '0';
 			retour *= 10;
