@@ -26,7 +26,7 @@ int _atoi(char *s)
 	{
 
 		retour += s[i] - '0';
-		if (retour <= max)
+		if (retour < max)
 		{
 			retour *= 10;
 		}
