@@ -30,6 +30,9 @@ int _atoi(char *s)
 		{
 			retour *= 10;
 		}
+		else
+			return INT_MAX;
+
 		i++;
 	}
 	if (retour < 0)
