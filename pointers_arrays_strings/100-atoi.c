@@ -39,7 +39,7 @@ int _atoi(char *s)
 			}
 			else
 			{
-				return (INT_MAX);
+				return (INT_MIN);
 			}
 		}
 
