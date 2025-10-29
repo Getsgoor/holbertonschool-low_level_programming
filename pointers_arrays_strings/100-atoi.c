@@ -11,9 +11,8 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
 	bool positif = true;
-	int retour = 0;
+	int retour = 0, i = 0;
 
 	while (!(s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
 	{
@@ -25,9 +24,8 @@ int _atoi(char *s)
 	{
 		retour *= 10;
 		if (retour == 2147483640  &&  (s[i] - '0' > 7))
-			return INT_MIN;
-		else
-			retour += s[i] - '0';
+			return (INT_MIN);
+		retour += s[i] - '0';
 	}
 
 	if (!positif)
