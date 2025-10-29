@@ -22,14 +22,16 @@ int _atoi(char *s)
 			positif = !positif;
 		i++;
 	}
-	for (; i >= '0'  &&  i <= '9'; i++)
+	for(;s[i] >= '0'  &&  s[i] <= '9'; i++)
 	{
 
 		retour *= 10;
 		retour += s[i] - '0';
+		
+
 	}
 
 	if (!positif)
 		retour *= (-1);
-	return (retour /= 10);
+	return (retour);
 }
