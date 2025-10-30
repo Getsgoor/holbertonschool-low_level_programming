@@ -10,7 +10,7 @@
 
 char *cap_string(char *str)
 {
-	bool nouveauMot = false;
+	bool nouveauMot = true;
 
 	for (; *str != '\0'; str++)
 	{
