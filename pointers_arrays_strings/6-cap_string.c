@@ -20,7 +20,7 @@ char *cap_string(char *str)
 	while (*str++ != '\0')
 	{
 		int i = 0;
-		
+
 		while (separators[i] != '\0')
 		{
 			if (*str == separators[i]  &&  *(str + 1) >= 'a'  &&  *(str + 1) <= 'z')
