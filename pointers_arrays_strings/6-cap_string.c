@@ -12,7 +12,7 @@ char *cap_string(char *str)
 {
 	bool nouveauMot = true;
 
-	for (; *str != '\0'; str++)
+	for (; *str++ != '\0';)
 	{
 		if (*str == 44  ||  *str == 59 || *str == ' '  || *str == '\n'  ||
 		*str == '\t'  ||  *str == 63  ||  *str == 46  ||  *str == 33  ||
