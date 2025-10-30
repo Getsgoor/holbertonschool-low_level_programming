@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
  * cap_string- capitalize all words
@@ -10,26 +9,24 @@
 
 char *cap_string(char *str)
 {
-	bool nouveauMot = true;
+	char separators[] = " \t\n,;.!?\"(){}";
 
-	for (; *str++ != '\0';)
+	if (*str >= 97  &&  *str <= 122)
 	{
-		if (*str == 44  ||  *str == 59 || *str == ' '  || *str == '\n'  ||
-		*str == '\t'  ||  *str == 63  ||  *str == 46  ||  *str == 33  ||
-		*str == 34  ||  *str == 40  ||  *str == 41  ||  *str == 123  ||
-		*str == 125)
+		*str -= 32;
+	}
+
+	while (*str++ != '\0')
+	{
+		int i = 0;
+
+		while (separators[i] != '\0')
 		{
-			nouveauMot = true;
-		}
-		if ((nouveauMot  &&  *str >= 65  &&  *str <= 90)  ||
-		(*str <= '9'  &&  *str >= '0'))
-		{
-			nouveauMot = false;
-		}
-		if (nouveauMot  &&  *str >= 97  &&  *str <= 122)
-		{
-			*str -= 32;
-			nouveauMot = false;
+			if (*str == separators[i]  &&  *(str + 1) >= 'a'  &&  *(str + 1) <= 'z')
+			{
+				*(str + 1) -= 32;
+			}
+			i++;
 		}
 	}
 	return (str);
