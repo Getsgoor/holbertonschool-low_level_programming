@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int taille = 1;
+	unsigned int taille = 1;
 
 	if (n < 0)
 	{
@@ -23,6 +23,7 @@ void print_number(int n)
 		taille *= 10;
 	}
 	taille /= 10;
+	printf("%d\n", taille);
 
 	while (taille > 0)
 	{
