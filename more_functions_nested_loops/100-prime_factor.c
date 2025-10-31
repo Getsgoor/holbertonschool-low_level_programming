@@ -3,20 +3,23 @@
 #include <math.h>
 /**
  * main- prints prime factor
- * 
+ *
  * Return: void
  */
 
 int main(void)
 {
-	int i;
-	printf("1,");
-	for (i = 2; i <6112852475143; i++)
+	long unsigned int i = 2;
+	long unsigned int n = 612852475143;
+
+	while (i <= sqrt(n))
 	{
-		if (6112852475143 % i == 0)
-		{
-			printf(" %d\n", i);
-		}
+		if (n % i == 0)
+			n /= i;
+		else
+			i++;
 	}
+	printf("%lu\n", n);
+
 	return (0);
 }
