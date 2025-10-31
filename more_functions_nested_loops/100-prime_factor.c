@@ -9,8 +9,8 @@
 
 int main(void)
 {
-	long unsigned int i = 2;
-	long unsigned int n = 612852475143;
+	long int i = 2;
+	long int n = 612852475143;
 
 	while (i <= sqrt(n))
 	{
